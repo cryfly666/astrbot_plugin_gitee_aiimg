@@ -228,6 +228,7 @@ class GiteeAIImage(Star):
             "prompt": prompt,
             "model": self.model,
             "extra_body": {
+                "image": "",
                 "num_inference_steps": self.num_inference_steps,
             },
         }
@@ -370,3 +371,4 @@ class GiteeAIImage(Star):
                 loop.create_task(self._http_session.close())
             except RuntimeError:
                 pass
+
